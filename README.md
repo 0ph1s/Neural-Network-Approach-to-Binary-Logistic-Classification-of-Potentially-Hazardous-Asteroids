@@ -1,103 +1,103 @@
-# 🌌 Classificação de Asteroides com Redes Neurais
+# 🌌 Asteroid Classification with Neural Networks
 
-Este projeto utiliza **Redes Neurais Artificiais** para classificar asteroides como **perigosos** ou **não perigosos** com base em dados astronômicos. A rede é treinada utilizando **regressão logística binária**, **gradiente descendente** e ajuste automático de hiperparâmetros com **KerasTuner**.
+This project uses **Artificial Neural Networks** to classify asteroids as **hazardous** or **non-hazardous** based on astronomical data. The network is trained using **binary logistic regression**, **gradient descent**, and automatic hyperparameter tuning via **KerasTuner**.
 
 ## 📊 Dataset
 
-Os dados são provenientes do Kaggle:  
+The data comes from Kaggle:  
 🔗 [NASA Nearest Earth Objects](https://www.kaggle.com/datasets/sameepvani/nasa-nearest-earth-objects?resource=download)
 
-A variável-alvo é `hazardous`, indicando se o asteroide representa risco para a Terra (`1` para perigoso, `0` para não perigoso).
+The target variable is `hazardous`, indicating whether the asteroid poses a threat to Earth (`1` for hazardous, `0` for non-hazardous).
 
-### 📥 Atributos utilizados:
-- `est_diameter_min` e `est_diameter_max`: Diâmetros estimados.
-- `relative_velocity`: Velocidade relativa.
-- `miss_distance`: Distância mínima de aproximação.
-- `absolute_magnitude`: Brilho absoluto.
+### 📥 Features used:
+- `est_diameter_min` and `est_diameter_max`: Estimated diameters
+- `relative_velocity`: Relative velocity
+- `miss_distance`: Closest approach distance
+- `absolute_magnitude`: Absolute brightness
 
-## 🧠 Arquitetura da Rede Neural
+## 🧠 Neural Network Architecture
 
-- Camadas ocultas densamente conectadas com **ReLU**
-- Camada de saída com ativação **sigmoid** (probabilidade entre 0 e 1)
-- Otimizador: **Adam**
-- Função de perda: **Binary Crossentropy**
+- Densely connected hidden layers with **ReLU**
+- Output layer with **sigmoid** activation (probability between 0 and 1)
+- Optimizer: **Adam**
+- Loss function: **Binary Crossentropy**
 
-O número de camadas, neurônios e taxa de aprendizado são ajustados automaticamente via busca aleatória (`RandomSearch` com `KerasTuner`).
+The number of layers, neurons per layer, and learning rate are automatically tuned using random search (`KerasTuner`).
 
-## ⚙️ Ajuste de Hiperparâmetros
+## ⚙️ Hyperparameter Tuning
 
-Com `KerasTuner` foram testados:
-- Número de camadas ocultas: 1 a 3
-- Neurônios por camada: 8 a 64
-- Taxa de aprendizado (η): entre 0.0001 e 0.01 (log scale)
+With `KerasTuner`, the following were explored:
+- Number of hidden layers: 1 to 3
+- Neurons per layer: 8 to 64
+- Learning rate (η): between 0.0001 and 0.01 (log scale)
 
-## 🧪 Resultados
+## 🧪 Results
 
-- **Acurácia final**: 91%
-- **AUC (Área sob a Curva ROC)**: 0.91
+- **Final Accuracy**: 91%
+- **AUC (Area Under the ROC Curve)**: 0.91
 
-### 🎯 Métricas de Classificação:
-| Classe       | Precisão | Revocação |
-|--------------|----------|-----------|
-| Não Perigoso | 0.92     | 0.99      |
-| Perigoso     | 0.73     | 0.14      |
+### 🎯 Classification Report:
+| Class         | Precision | Recall |
+|---------------|-----------|--------|
+| Non-Hazardous | 0.92      | 0.99   |
+| Hazardous     | 0.73      | 0.14   |
 
-### 🔢 Matriz de Confusão
+### 🔢 Confusion Matrix
 ```
 [[16346    93]
  [ 1480   249]]
 ```
 
-## 📈 Visualizações
+## 📈 Visualizations
 
-- **Curva ROC**  
-- **Acurácia por época (treinamento e validação)**  
-- **Perda por época (treinamento e validação)**  
+- **ROC Curve**  
+- **Accuracy per Epoch (training and validation)**  
+- **Loss per Epoch (training and validation)**  
 
-## 📚 Fundamentos Matemáticos
+## 📚 Mathematical Foundations
 
-Este projeto está embasado em uma análise matemática completa:
+This project is backed by a full mathematical analysis:
 
-- **Função de perda**:  
+- **Loss function**:  
   \( L(y, \hat{y}) = -[y \log(\hat{y}) + (1 - y)\log(1 - \hat{y})] \)
 
-- **Atualização dos pesos com gradiente descendente**:  
+- **Weight update via gradient descent**:  
   \( ec{w}_{t+1} = ec{w}_t - \eta \cdot 
 abla L(ec{w}_t) \)
 
-- Condições de ótimo:  
-  - Gradiente nulo  
-  - Hessiana positiva definida
+- Optimality conditions:  
+  - Zero gradient  
+  - Positive definite Hessian
 
-Veja o PDF completo com a análise matemática: [`Neural_Network-3.pdf`](Neural_Network-3.pdf)
+See the full PDF analysis: [`Neural_Network-3.pdf`](Neural_Network-3.pdf)
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 📦 asteroid-classification
-├── 📄 neo.csv               # Dataset original
-├── 📄 modelo_neural.py      # Código do projeto
-├── 📄 Neural_Network-3.pdf  # Análise matemática
-├── 📄 README.md             # Este arquivo
+├── 📄 neo.csv               # Original dataset
+├── 📄 modelo_neural.py      # Project code
+├── 📄 Neural_Network-3.pdf  # Mathematical analysis
+├── 📄 README.md             # This file
 ```
 
-## 🚀 Como Executar
+## 🚀 How to Run
 
-1. Instale as dependências:
+1. Install dependencies:
 ```bash
 pip install pandas numpy matplotlib scikit-learn tensorflow keras-tuner
 ```
 
-2. Execute o código:
+2. Run the code:
 ```bash
 python modelo_neural.py
 ```
 
 ---
 
-## ✍️ Autor
+## ✍️ Author
 
 Peterson Carara Junior  
-📅 Junho, 2025
+📅 June, 2025
 
 ---
