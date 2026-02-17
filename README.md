@@ -58,17 +58,6 @@ With `KerasTuner`, the following were explored:
 
 This project is backed by a full mathematical analysis:
 
-- **Loss function**:  
-  \( L(y, \hat{y}) = -[y \log(\hat{y}) + (1 - y)\log(1 - \hat{y})] \)
-
-- **Weight update via gradient descent**:  
-  \( ec{w}_{t+1} = ec{w}_t - \eta \cdot 
-abla L(ec{w}_t) \)
-
-- Optimality conditions:  
-  - Zero gradient  
-  - Positive definite Hessian
-
 See the full PDF analysis: [`Neural_Network-3.pdf`](Neural_Network-3.pdf)
 
 ## 📁 Project Structure
