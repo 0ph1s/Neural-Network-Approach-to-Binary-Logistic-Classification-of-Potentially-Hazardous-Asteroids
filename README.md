@@ -58,7 +58,7 @@ With `KerasTuner`, the following were explored:
 
 This project is backed by a full mathematical analysis:
 
-See the full PDF analysis: [`Neural_Network.pdf`](Neural_Network.pdf)
+See the full PDF analysis: [`Analysis_English.pdf`](Analysis_English.pdf) or [`Analise_Portugues.pdf`](Analise_Portugues.pdf)
 
 ## 📁 Project Structure
 
