@@ -64,10 +64,11 @@ See the full PDF analysis: [`Analysis_English.pdf`](Analysis_English.pdf) or [`A
 
 ```
 📦 asteroid-classification
-├── 📄 neo.csv               # Original dataset
-├── 📄 modelo_neural.py      # Project code
-├── 📄 Neural_Network-3.pdf  # Mathematical analysis
-├── 📄 README.md             # This file
+├── 📄 neo.csv                # Original dataset
+├── 📄 Neurlal.ipynb          # Project code
+├── 📄 Analise_Portugues.pdf  # Mathematical analysis in Portuguese
+├── 📄 Analise_Portugues.pdf  # Mathematical analysis in English
+├── 📄 README.md              # This file
 ```
 
 dependencies:
