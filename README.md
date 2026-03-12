@@ -70,19 +70,10 @@ See the full PDF analysis: [`Analysis_English.pdf`](Analysis_English.pdf) or [`A
 ├── 📄 README.md             # This file
 ```
 
-## 🚀 How to Run
-
-1. Install dependencies:
+dependencies:
 ```bash
 pip install pandas numpy matplotlib scikit-learn tensorflow keras-tuner
 ```
-
-2. Run the code:
-```bash
-python modelo_neural.py
-```
-
----
 
 ## ✍️ Author
 
